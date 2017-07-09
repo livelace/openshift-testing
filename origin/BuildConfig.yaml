@@ -1,0 +1,22 @@
+apiVersion: "v1"
+kind: "BuildConfig"
+metadata:
+  name: "${APP_NAME}"
+  labels:
+    conf: "${APP_NAME}"
+spec:
+  source:
+    type: "Git"
+    git:
+      uri: "http://10.0.2.15:3000/git/build.git"
+
+  strategy:
+    type: "Docker"
+    dockerStrategy:
+      dockerfilePath: docker/supervisor_with_curl
+      noCache: true
+
+  output:
+    to:
+      kind: "ImageStreamTag"
+      name: "${APP_NAME}:${APP_VERSION}"

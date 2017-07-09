@@ -1,0 +1,12 @@
+Vagrant.configure(2) do |config|
+
+  config.vm.define "viewshift" do |viewshift|
+    viewshift.vm.box = "viewshift"
+  end
+
+  config.vm.provider "virtualbox" do |vb|
+    vb.gui = true
+    vb.memory = "4056"
+  end
+
+end

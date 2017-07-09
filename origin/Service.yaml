@@ -1,0 +1,31 @@
+apiVersion: v1
+kind: List
+items:
+
+- apiVersion: v1
+  kind: Service
+  metadata:
+    name: "nginx"
+    labels:
+      conf: "${APP_NAME}-${APP_VERSION}"
+  spec:
+    selector:
+        name: "nginx"
+    ports:
+      - port: 80
+        targetPort: 80
+        name: "http"
+
+- apiVersion: v1
+  kind: Service
+  metadata:
+    name: "${APP_NAME}"
+    labels:
+      conf: "${APP_NAME}-${APP_VERSION}"
+  spec:
+    selector:
+        name: "${APP_NAME}-${APP_VERSION}"
+    ports:
+      - port: 9001
+        targetPort: 9001
+        name: "supervisord"

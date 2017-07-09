@@ -1,0 +1,28 @@
+apiVersion: "v1"
+kind: "Pod"
+metadata:
+  name: "${APP_NAME}-${APP_VERSION}"
+  labels:
+    name: "${APP_NAME}-${APP_VERSION}"
+    conf: "${APP_NAME}-${APP_VERSION}"
+
+spec:
+  containers:
+    -
+      name: "${APP_NAME}"
+      image: "172.30.52.248:5000/${PROJECT}/${APP_NAME}:${APP_VERSION}"
+      imagePullPolicy: Always
+
+      volumeMounts:
+        -
+          name: "share"
+          mountPath: "/share"
+
+      securityContext:
+        privileged: true
+
+  volumes:
+    -
+      name: "share"
+      hostPath:
+        path: "/share"
