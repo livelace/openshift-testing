@@ -11,7 +11,7 @@
 
 #### Быстрый старт:
 
-1. [Загрузить Vagrant образ](https://drive.google.com/file/d/0B7eLip8tUY6uVXd2eHFoVTVpRmM/view?usp=sharing) и [Vagrantfile](https://raw.githubusercontent.com/livelace/openshift-testing/master/vagrant/Vagrantfile)
+1. [Загрузить Vagrant образ](https://drive.google.com/file/d/0B7eLip8tUY6ubk8wNE5vU2pmVWs/view?usp=sharing) и [Vagrantfile](https://raw.githubusercontent.com/livelace/openshift-testing/master/vagrant/Vagrantfile)
 2. ```vagrant box add --name viewshift viewshift-1.0.box && vagrant up```
 
 <spoiler title="Описание окружения">
@@ -40,6 +40,10 @@
 |system|-|user:user|
 |system|-|vagrant:vagrant|
 
+
+SHA1:
+
+0992d621809446e570be318067b70fe2b8e786b2  viewshift-1.0.box
 
 </spoiler>
 
@@ -113,7 +117,7 @@
 #### Всё вместе:
 
 
-<oembed>https://youtu.be/A5GXLu0IXcc/</oembed>
+<oembed>https://youtu.be/Uh7pvjwGFCc</oembed>
 
 
 #### Преимущества и недостатки тестирования в контейнерах:
