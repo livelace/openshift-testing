@@ -11,7 +11,7 @@
 
 #### Быстрый старт:
 
-1. [Загрузить Vagrant образ](https://drive.google.com/file/d/0B7eLip8tUY6uZnNhcWNmLUwtZUU/view?usp=sharing) и [Vagrantfile](https://drive.google.com/file/d/0B7eLip8tUY6uZnNhcWNmLUwtZUU/view?usp=sharing)
+1. [Загрузить Vagrant образ](https://drive.google.com/file/d/0B7eLip8tUY6uVXd2eHFoVTVpRmM/view?usp=sharing) и [Vagrantfile](https://raw.githubusercontent.com/livelace/openshift-testing/master/vagrant/Vagrantfile)
 2. ```vagrant box add --name viewshift viewshift-1.0.box && vagrant up```
 
 <spoiler title="Описание окружения">
