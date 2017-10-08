@@ -1,0 +1,20 @@
+heat_template_version: 2017-02-24
+
+resources:
+  solaris_port:
+    type: OS::Neutron::Port
+    properties:
+      network: "openshift-pod"
+      name: "solaris"
+      fixed_ips: [{"subnet_id": "openshift-pod"}]
+
+  solaris:
+    type: OS::Nova::Server
+    properties:
+      name: solaris
+      key_name: jenkins-openstack
+      image: solaris11
+      flavor: m1.medium
+      networks:
+        - port: { get_resource: solaris_port }
+  
